@@ -1,11 +1,12 @@
 # CurrencyRouletteGame.py
 
+from Game import Game
 import random
 import currency_converter
 
 
 # Game class
-class CurrencyRouletteGame:
+class CurrencyRouletteGame(Game):
     usd_value = 0
     ils_value = 0
 

@@ -1,5 +1,6 @@
 # GuessGame.py
 
+from Game import Game
 import random
 
 
@@ -14,7 +15,7 @@ def get_guess_from_user(difficulty):
 
 
 # Game class
-class GuessGame:
+class GuessGame(Game):
     secret_number = 0
 
     # Will generate number between 1 to difficulty and save it

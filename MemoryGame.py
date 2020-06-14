@@ -1,5 +1,6 @@
 # MemoryGame.py
 
+from Game import Game
 import random
 import time
 import os
@@ -27,7 +28,7 @@ def is_list_equal(l1, l2):
 
 
 # Game class
-class MemoryGame:
+class MemoryGame(Game):
     numbers_list = []
 
     # Generate a list of random numbers between 1 to 101
