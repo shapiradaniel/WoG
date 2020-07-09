@@ -1,3 +1,5 @@
 .idea/
 venv/
+templates/
 *pycache*/
+Scores.txt

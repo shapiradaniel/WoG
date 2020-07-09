@@ -1,9 +1,9 @@
 # MemoryGame.py
 
 from Game import Game
+from Utils import screen_cleaner
 import random
 import time
-import os
 
 
 # Will return a list of numbers prompted from the user
@@ -24,7 +24,7 @@ def get_list_from_user(list_size):
 # Compare two lists if they are equal
 def is_list_equal(l1, l2):
     print("The numbers was : %s" % l1)
-    return l1.sort() == l2.sort()
+    return sorted(l1) == sorted(l2)
 
 
 # Game class
@@ -42,5 +42,5 @@ class MemoryGame(Game):
         self.generate_sequence(difficulty)
         print(self.numbers_list)
         time.sleep(0.7)
-        os.system("CLS")
+        screen_cleaner()
         return is_list_equal(self.numbers_list, get_list_from_user(difficulty))
