@@ -3,6 +3,7 @@
 from MemoryGame import MemoryGame
 from GuessGame import GuessGame
 from CurrencyRouletteGame import CurrencyRouletteGame
+from Score import add_score
 
 # CONST definitions
 GAME_LIST = (
@@ -70,4 +71,8 @@ def load_game():
     game_number = get_game_number()
     game_difficulty = get_game_difficulty()
     game = GAME_LIST[game_number-1]["name"]()
-    print("You WIN") if game.play(game_difficulty) else print("You LOSE")
+    if game.play(game_difficulty):
+        print("You WIN")
+        add_score(game_difficulty)
+    else:
+        print("You LOSE")
